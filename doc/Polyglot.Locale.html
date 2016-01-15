@@ -1,0 +1,210 @@
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.11.3">
+    <title>Polyglot.Locale – polyglot v0.0.1</title>
+    <link rel="stylesheet" href="dist/app-ddd9717ad9.css" />
+    <script src="dist/sidebar_items.js"></script>
+  </head>
+  <body data-type="modules">
+
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+  <button class="sidebar-toggle">
+    <i class="icon-menu"></i>
+  </button>
+
+  
+  <a href="Polyglot.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        polyglot
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v0.0.1
+      </h2>
+    </div>
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+
+    
+  </ul>
+
+  <ul id="full-list" class="sidebar-fullList"></ul>
+  <div class="sidebar-noResults"></div>
+</section>
+
+<section class="content">
+  <div id="content" class="content-inner">
+
+
+      <h1>
+        <small class="visible-xs">polyglot v0.0.1</small>
+        Polyglot.Locale
+        
+        
+          <a href="https://github.com/padde/polyglot/blob/v0.0.1/lib/polyglot/locale.ex#L1" title="View Source" class="view-source" rel="help">
+            <i class="icon-code"></i>
+          </a>
+        
+      </h1>
+
+      
+        <section id="moduledoc" class="docstring">
+          <p>Internal helpers to work with locale identifiers.</p>
+
+        </section>
+      
+
+      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
+
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#has_parent?/1">has_parent?(locale)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns true if the locale looks like it is the subtype of another locale. Does <em>not</em> check if the parent locale actually exists</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#parent/1">parent(locale)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the parent locale for the specified locale by stripping of one trailing subtype and underscore. Returns <code>nil</code> if there is no parent locale to be extracted from the locale. Does <em>not</em> check if the parent locale actually exists</p>
+</div>
+  
+</div>
+
+  </div>
+
+
+          
+
+          
+
+        </section>
+      
+
+      
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <i class="icon-link"></i>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="has_parent?/1">
+  <div class="detail-header">
+    <a href="#has_parent?/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">has_parent?(locale)</span>
+      
+      <a href="https://github.com/padde/polyglot/blob/v0.0.1/lib/polyglot/locale.ex#L50" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns true if the locale looks like it is the subtype of another locale. Does <em>not</em> check if the parent locale actually exists.</p>
+<h1 id="examples">Examples</h1>
+<pre><code class="iex elixir">iex&gt; Polyglot.Locale.has_parent?(:fr)
+false
+
+iex&gt; Polyglot.Locale.has_parent?(:de_AT)
+true</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="parent/1">
+  <div class="detail-header">
+    <a href="#parent/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">parent(locale)</span>
+      
+      <a href="https://github.com/padde/polyglot/blob/v0.0.1/lib/polyglot/locale.ex#L23" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns the parent locale for the specified locale by stripping of one trailing subtype and underscore. Returns <code>nil</code> if there is no parent locale to be extracted from the locale. Does <em>not</em> check if the parent locale actually exists.</p>
+<h1 id="examples">Examples</h1>
+<pre><code class="iex elixir">iex&gt; Polyglot.Locale.parent(:fr)
+nil
+
+iex&gt; Polyglot.Locale.parent(:de_AT)
+:de
+
+iex&gt; Polyglot.Locale.parent(:en_US_POSIX)
+:en_US</code></pre>
+
+  </section>
+</div>
+
+        </section>
+      
+
+      
+
+      
+        <footer class="footer">
+      <p>
+        <span class="line">
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.3),
+        </span>
+        <span class="line">
+          designed by
+          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+      </p>
+      <button class="night-mode-toggle" />
+    </footer>
+  </div>
+</section>
+</div>
+  <script src="dist/app-6d2e071366.js"></script>
+  </body>
+</html>
+

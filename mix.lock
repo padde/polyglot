@@ -1,0 +1,2 @@
+%{"ex_doc": {:hex, :ex_doc, "0.11.3"},
+  "exml": {:hex, :exml, "0.1.0"}}
